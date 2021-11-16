@@ -37,7 +37,7 @@ jobs:
         ./gradlew tomcatDeploy
         ./gradlew deployKarutaConfig
     - name: run tomcat
-      if: ${{startsWith(needs.deploy.matrix.java, '8')}}
+      if: ${{startsWith(matrix.java, '8')}}
       run: |
         ./gradlew tomcatStart
         ./gradlew tomcatStop
