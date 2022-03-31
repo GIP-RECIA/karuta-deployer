@@ -156,7 +156,13 @@
       <Host name="localhost"  appBase="webapps"
             unpackWARs="false" autoDeploy="false">
 
-          <Context path="/karuta" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+          <Context path="/recia" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/univ-orleans" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/univ-tours" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/karuta-backend" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
@@ -188,7 +194,13 @@
           <Context path="/karuta-fileserver" docBase="${server.webapps}/karuta-fileserver" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
-          <Context path="/karuta-config" docBase="${server.webapps}/karuta-config" reloadable="false" crossContext="true" >
+          <Context path="/recia-config" docBase="${server.webapps}/recia-config" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/univ-orleans-config" docBase="${server.webapps}/univ-orleans-config" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/univ-tours-config" docBase="${server.webapps}/univ-tours-config" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/manager" docBase="${server.home}/webapps/manager" reloadable="false" antiResourceLocking="false" privileged="true" useHttpOnly="true">
