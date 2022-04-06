@@ -3,7 +3,7 @@ var application_version = "2.0";
 var application_date = "2017-10-30";
 //----------------------------------
 var appliname = 'univ-orleans';
-var bckname = '';
+var bckname = '-univ-orleans';
 var serverBCK = "../../../karuta-backend"+bckname; // fileserver backend
 var serverBCK_API = "../../../karuta-backend"+bckname+"/rest/api";
 var cas_url = "";
