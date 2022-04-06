@@ -163,18 +163,26 @@
       <Host name="localhost"  appBase="webapps"
             unpackWARs="false" autoDeploy="false">
 
-          <Context path="/recia" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+          <Context path="/univ-orleans" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
-          <Context path="/univ-orleans" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+          <Context path="/recia-orleans" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/univ-tours" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
-          <Context path="/karuta-backend" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
-               <!--
-               <Resource name="jdbc/karutaBackend" auth="Container" type="javax.sql.DataSource"
+          <Context path="/recia-tours" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/insa-cvdl" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/recia-insa" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/karuta-backend-univ-orleans" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
+               <Resource name="jdbc/karutaBackendUnivOrleans" auth="Container" type="javax.sql.DataSource"
                     factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
                     username="USER" password="CHANGEIT"
                     driverClassName="org.mariadb.jdbc.Driver" url="jdbc:mariadb://DATABASE_SERVER:PORT/DATABASE?useUnicode=true&amp;useEncoding=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Europe/Paris"
@@ -194,19 +202,73 @@
                     logAbandoned="true"
                     defaultTransactionIsolation="READ_COMMITTED"
                />
-               -->
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/karuta-backend-univ-tours" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
+               <Resource name="jdbc/karutaBackendUnivTours" auth="Container" type="javax.sql.DataSource"
+                    factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+                    username="USER" password="CHANGEIT"
+                    driverClassName="org.mariadb.jdbc.Driver" url="jdbc:mariadb://DATABASE_SERVER:PORT/DATABASE?useUnicode=true&amp;useEncoding=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Europe/Paris"
+                    initialSize="10" minIdle="10"
+                    maxActive="200" maxIdle="30" maxWait="1000"
+                    removeAbandoned="true"
+                    removeAbandonedTimeout="30"
+                    testOnBorrow="true"
+                    testWhileIdle="true"
+                    numTestsPerEvictionRun="5"
+                    timeBetweenEvictionRunsMillis="10000"
+                    minEvictableIdleTimeMillis="60000"
+                    validationQuery="SELECT 1"
+                    validationQueryTimeout="7"
+                    jdbcInterceptors="ConnectionState(useEquals=true);ResetAbandonedTimer;SlowQueryReport"
+                    jmxEnabled="true"
+                    logAbandoned="true"
+                    defaultTransactionIsolation="READ_COMMITTED"
+               />
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/karuta-backend-insa-cvdl" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
+               <Resource name="jdbc/karutaBackendInsaCVDL" auth="Container" type="javax.sql.DataSource"
+                    factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+                    username="USER" password="CHANGEIT"
+                    driverClassName="org.mariadb.jdbc.Driver" url="jdbc:mariadb://DATABASE_SERVER:PORT/DATABASE?useUnicode=true&amp;useEncoding=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Europe/Paris"
+                    initialSize="10" minIdle="10"
+                    maxActive="200" maxIdle="30" maxWait="1000"
+                    removeAbandoned="true"
+                    removeAbandonedTimeout="30"
+                    testOnBorrow="true"
+                    testWhileIdle="true"
+                    numTestsPerEvictionRun="5"
+                    timeBetweenEvictionRunsMillis="10000"
+                    minEvictableIdleTimeMillis="60000"
+                    validationQuery="SELECT 1"
+                    validationQueryTimeout="7"
+                    jdbcInterceptors="ConnectionState(useEquals=true);ResetAbandonedTimer;SlowQueryReport"
+                    jmxEnabled="true"
+                    logAbandoned="true"
+                    defaultTransactionIsolation="READ_COMMITTED"
+               />
                <Manager pathname=""/>
           </Context>
           <Context path="/karuta-fileserver" docBase="${server.webapps}/karuta-fileserver" reloadable="false" crossContext="true" >
-               <Manager pathname=""/>
-          </Context>
-          <Context path="/recia-config" docBase="${server.webapps}/recia-config" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/univ-orleans-config" docBase="${server.webapps}/univ-orleans-config" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/univ-tours-config" docBase="${server.webapps}/univ-tours-config" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/insa-cvdl-config" docBase="${server.webapps}/insa-cvdl-config" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/recia-orleans-config" docBase="${server.webapps}/recia-orleans-config" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/recia-tours-config" docBase="${server.webapps}/recia-tours-config" reloadable="false" crossContext="true" >
+               <Manager pathname=""/>
+          </Context>
+          <Context path="/recia-insa-config" docBase="${server.webapps}/recia-insa-config" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/manager" docBase="${server.home}/webapps/manager" reloadable="false" antiResourceLocking="false" privileged="true" useHttpOnly="true">
