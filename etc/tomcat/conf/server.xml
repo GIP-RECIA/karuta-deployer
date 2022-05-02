@@ -168,7 +168,7 @@
           <Context path="/recia-tours" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
-          <Context path="/insa-cvdl" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+          <Context path="/insa-cvl" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/recia-insa" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
@@ -220,7 +220,7 @@
                />
                <Manager pathname=""/>
           </Context>
-          <Context path="/karuta-backend-insa-cvdl" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
+          <Context path="/karuta-backend-insa-cvl" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
                <Resource name="jdbc/karutaBackendInsaCVDL" auth="Container" type="javax.sql.DataSource"
                     factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
                     username="USER" password="CHANGEIT"
@@ -253,7 +253,7 @@
           <Context path="/univ-tours-config" docBase="${server.webapps}/univ-tours-config" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
-          <Context path="/insa-cvdl-config" docBase="${server.webapps}/insa-cvdl-config" reloadable="false" crossContext="true" >
+          <Context path="/insa-cvl-config" docBase="${server.webapps}/insa-cvl-config" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/recia-orleans-config" docBase="${server.webapps}/recia-orleans-config" reloadable="false" crossContext="true" >
