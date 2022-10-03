@@ -1,12 +1,11 @@
 //----------------------------------
-var application_version = "2.0";
-var application_date = "2017-10-30";
-//----------------------------------
 var appliname = 'univ-tours';
 var bckname = '-univ-tours';
-var serverBCK = "../../../karuta-backend"+bckname; // fileserver backend
+var serverBCK = "../../../karuta-backend"+bckname; // backend
 var serverBCK_API = "../../../karuta-backend"+bckname+"/rest/api";
 var cas_url = "";
+// to hide local auth imputs part set localLogin to false
+var localLogin = false;
 //-------- LANGUAGES------------
 var languages = [];
 languages [0] = 'fr';
