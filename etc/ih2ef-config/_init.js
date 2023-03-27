@@ -1,6 +1,6 @@
 //----------------------------------
-var appliname = 'karuta';
-var bckname = '';
+var appliname = 'ih2ef';
+var bckname = '-ih2ef';
 var serverBCK = "../../../karuta-backend"+bckname; // backend
 var serverBCK_API = "../../../karuta-backend"+bckname+"/rest/api";
 var cas_url = "";
@@ -9,7 +9,7 @@ var localLogin = true;
 //-------- LANGUAGES------------
 var languages = [];
 languages [0] = 'fr';
-languages [1] = 'en';
+//languages [1] = 'en';
 //----------------------------------
 var LANGCODE = 0; //default value
 var LANG = languages[LANGCODE]; //default value
