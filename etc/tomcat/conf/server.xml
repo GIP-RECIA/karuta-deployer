@@ -188,7 +188,7 @@
                     jdbcInterceptors="ConnectionState(useEquals=true);ResetAbandonedTimer;SlowQueryReport"
                     jmxEnabled="true"
                     logAbandoned="true"
-                    defaultTransactionIsolation="READ_COMMITTED"
+                    defaultTransactionIsolation="TRANSACTION_READ_COMMITTED"
                />
                <Manager pathname=""/>
           </Context>
@@ -215,6 +215,7 @@
                />
                <Manager pathname=""/>
           </Context>
+          <!-- WARNING: don't expose to the web the context /karuta-fileserver, it's only required on localhost -->
           <Context path="/karuta-fileserver" docBase="${server.webapps}/karuta-fileserver" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
