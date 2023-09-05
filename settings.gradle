@@ -14,4 +14,5 @@ rootProject.name = 'gradle-war-deployer'
 include "overlays:${appName}-backend"
 include "overlays:${appName}-fileserver"
 include "overlays:${appName}"
+include "overlays:ih2ef"
 include 'overlays:psi-probe'

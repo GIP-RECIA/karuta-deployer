@@ -166,7 +166,7 @@
           <Context path="/karuta" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
-          <Context path="/ih2ef" docBase="${server.webapps}/karuta" reloadable="false" crossContext="true" >
+          <Context path="/ih2ef" docBase="${server.webapps}/ih2ef" reloadable="false" crossContext="true" >
                <Manager pathname=""/>
           </Context>
           <Context path="/karuta-backend" docBase="${server.webapps}/karuta-backend" reloadable="false" crossContext="true" >
